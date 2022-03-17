@@ -1,0 +1,109 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  display: table-cell;
+  vertical-align: middle;
+  font-family: 'Roboto', sans-serif;
+  background-color: #004980;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  width: calc(480px - 48px);
+  height: calc(460px - 48px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 48px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #C2F5FF;
+  border-radius: 12px;
+  margin: auto;
+  padding: 48px;
+}
+
+.basic-text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 48px;
+  color: #004980;
+  text-align: center;
+}
+
+.basic-button {
+  width: 246px;
+  height: 48px;
+  color: #FFFFFF;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 48px;
+  text-align: center;
+  background: #7AC100;
+  border-radius: 12px;
+}
+
+.basic-button:hover {
+  cursor: pointer;
+  background: #619900;
+}
+
+.wrapper.difficulty {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.basic-text.difficulty {
+  width: 208px;
+  margin: auto;
+}
+
+.difficulty-cards-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 24px;
+}
+
+.difficulty-card {
+  width: 98px;
+  height: 98px;
+  background: #FFFFFF;
+  border-radius: 12px;
+  border: none;
+  color: #0080C1;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 72px;
+  text-align: center;
+}
+
+.difficulty-card:hover, .difficulty-card.activated {
+  cursor: pointer;
+  border: solid 4px #0080C1;
+}
+
+.basic-button.difficulty {
+  margin: auto;
+}
+/*# sourceMappingURL=index.css.map */
