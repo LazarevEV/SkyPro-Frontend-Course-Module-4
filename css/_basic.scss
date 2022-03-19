@@ -1,6 +1,8 @@
 body {
     width: 100vw;
     height: 100vh;
+    // width: 1024px;
+    // height: 768px;
 
     display: table-cell;
     vertical-align: middle;
@@ -22,7 +24,7 @@ body {
     align-items: center;
     justify-content: center;
 
-    background-color: #C2F5FF;
+    background-color: #c2f5ff;
     border-radius: 12px;
 
     margin: auto;
@@ -43,15 +45,16 @@ body {
     width: 246px;
     height: 48px;
 
-    color: #FFFFFF;
+    color: #ffffff;
     font-style: normal;
     font-weight: 400;
     font-size: 24px;
     line-height: 48px;
     text-align: center;
 
-    background: #7AC100;
+    background: #7ac100;
     border-radius: 12px;
+    border: none;
 }
 
 .basic-button:hover {

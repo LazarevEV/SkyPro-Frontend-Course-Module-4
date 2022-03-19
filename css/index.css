@@ -26,7 +26,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: #C2F5FF;
+  background-color: #c2f5ff;
   border-radius: 12px;
   margin: auto;
   padding: 48px;
@@ -44,14 +44,15 @@ body {
 .basic-button {
   width: 246px;
   height: 48px;
-  color: #FFFFFF;
+  color: #ffffff;
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
   line-height: 48px;
   text-align: center;
-  background: #7AC100;
+  background: #7ac100;
   border-radius: 12px;
+  border: none;
 }
 
 .basic-button:hover {
@@ -87,10 +88,10 @@ body {
 .difficulty-card {
   width: 98px;
   height: 98px;
-  background: #FFFFFF;
+  background: #ffffff;
   border-radius: 12px;
   border: none;
-  color: #0080C1;
+  color: #0080c1;
   font-style: normal;
   font-weight: 400;
   font-size: 64px;
@@ -98,12 +99,95 @@ body {
   text-align: center;
 }
 
-.difficulty-card:hover, .difficulty-card.activated {
+.difficulty-card:hover,
+.difficulty-card.activated {
   cursor: pointer;
-  border: solid 4px #0080C1;
+  border: solid 4px #0080c1;
 }
 
 .basic-button.difficulty {
   margin: auto;
+}
+
+.game-header {
+  width: 984px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 24px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.time-block {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 72px 16px 72px;
+      grid-template-columns: 72px 16px 72px;
+  -ms-grid-rows: 22px 1fr;
+      grid-template-rows: 22px 1fr;
+  grid-gap: 0px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.time-label {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  text-align: right;
+  color: #FFFFFF;
+  padding-right: 4px;
+}
+
+.time-label.big {
+  font-size: 64px;
+  line-height: 72px;
+  padding: 0;
+}
+
+.basic-button.start-again {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.cards-wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (95px)[9];
+      grid-template-columns: repeat(9, 95px);
+  -ms-grid-rows: (1fr)[4];
+      grid-template-rows: repeat(4, 1fr);
+  grid-gap: 16px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 24px;
+}
+
+.game-card {
+  width: 95px;
+  height: 133px;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+
+.game-card:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
 }
 /*# sourceMappingURL=index.css.map */

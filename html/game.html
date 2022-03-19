@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="shortcut icon" href="#" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="../css/index.css" />
+        <title>Module 4 - Game</title>
+    </head>
+    <body>
+        <div class="game-header">
+            <div class="time-block">
+                <span class="time-label">min</span>
+                <span class="time-label"></span>
+                <span class="time-label">sec</span>
+                <span class="time-label big" id="timeMinutes">00</span>
+                <span class="time-label big">.</span>
+                <span class="time-label big" id="timeSeconds">00</span>
+            </div>
+            <button class="basic-button start-again">Начать заново</button>
+        </div>
+        <div class="cards-wrapper"></div>
+    </body>
+    <script>
+        const cartesian = (...a) => a.reduce((a, b) => a.flatMap(d => b.map(e => [d, e].flat())));
+
+        const cardsWrapper = document.querySelector('.cards-wrapper');
+        cartesian(['clubs', 'diamonds', 'hearts', 'spades'], ['A', 'K', 'Q', 'J', '10', '9', '8', '7', '6']).forEach(pair => {
+            // const cardElement = document.createElement('div');
+            const cardElement = document.createElement('img');
+            cardElement.classList.add('game-card');
+            cardElement.setAttribute('id', pair.join('_'));
+            cardElement.setAttribute('src', `../src/card-faces/${pair.join('_')}.png`)
+            
+            cardsWrapper.appendChild(cardElement);
+        });
+    </script>
+</html>
