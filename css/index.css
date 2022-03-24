@@ -195,17 +195,21 @@ body {
   transition: all 0.35s ease;
 }
 
-.game-card:hover {
+.game-card:hover, .game-card.chosen {
   cursor: pointer;
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   -webkit-transition: all 0.35s ease;
   transition: all 0.35s ease;
 }
 
-.wrapper.game-result {
+.game-card.hidden {
+  opacity: 0;
+}
+
+.modal-content.game-result {
   gap: 24px;
 }
 

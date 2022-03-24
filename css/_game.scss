@@ -59,9 +59,13 @@
     transition: all 0.35s ease;
 }
 
-.game-card:hover {
+.game-card:hover, .game-card.chosen {
     cursor: pointer;
-    transform: scale(1.2);
+    transform: scale(1.1);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     transition: all 0.35s ease;
+}
+
+.game-card.hidden {
+    opacity: 0;
 }
