@@ -40,4 +40,9 @@
         "webpack-cli": "^4.9.2",
         "webpack-dev-server": "^4.7.4"
     }
+    ,"stylelint": {
+        "rules": {
+            "declaration-block-single-line-max-declarations": 10
+        }
+    }
 }
