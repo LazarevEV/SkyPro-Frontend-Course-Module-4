@@ -11,8 +11,6 @@ const tests: [string, number][] = [
 tests.forEach(test => {
     it(`Grid Template Rows established`, () => {
         const functResult = getGridTemplateRows(test[0]);
-        if (functResult !== test[1]) {
-            throw Error(`Expected: ${test[1]}; Received: ${functResult}`);
-        }
+        expect(functResult).toBe(test[1]);
     })
 })
