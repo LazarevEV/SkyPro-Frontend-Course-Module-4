@@ -14,23 +14,6 @@ body {
     padding: 0;
 }
 
-.wrapper {
-    width: calc(480px - 48px);
-    height: calc(460px - 48px);
-
-    display: flex;
-    flex-direction: column;
-    gap: 48px;
-    align-items: center;
-    justify-content: center;
-
-    background-color: #c2f5ff;
-    border-radius: 12px;
-
-    margin: auto;
-    padding: 48px;
-}
-
 .basic-text {
     font-style: normal;
     font-weight: 400;

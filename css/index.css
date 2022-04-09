@@ -9,29 +9,6 @@ body {
   padding: 0;
 }
 
-.wrapper {
-  width: calc(480px - 48px);
-  height: calc(460px - 48px);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 48px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background-color: #c2f5ff;
-  border-radius: 12px;
-  margin: auto;
-  padding: 48px;
-}
-
 .basic-text {
   font-style: normal;
   font-weight: 400;
@@ -58,6 +35,43 @@ body {
 .basic-button:hover {
   cursor: pointer;
   background: #619900;
+}
+
+.modal-wrapper {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  overflow: auto;
+}
+
+.modal-content {
+  width: calc(480px - 48px);
+  height: calc(460px - 48px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 48px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #f0f0f0;
+  border-radius: 12px;
+  -webkit-box-shadow: 0px 0px 16px 8px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 0px 16px 8px rgba(0, 0, 0, 0.25);
+  margin: auto;
+  margin-top: calc(50vh - 240px);
+  padding: 48px;
 }
 
 .wrapper.difficulty {
@@ -181,17 +195,21 @@ body {
   transition: all 0.35s ease;
 }
 
-.game-card:hover {
+.game-card:hover, .game-card.chosen {
   cursor: pointer;
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   -webkit-transition: all 0.35s ease;
   transition: all 0.35s ease;
 }
 
-.wrapper.game-result {
+.game-card.hidden {
+  opacity: 0;
+}
+
+.modal-content.game-result {
   gap: 24px;
 }
 
