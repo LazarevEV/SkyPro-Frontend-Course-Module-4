@@ -1,0 +1,15 @@
+{
+    "extends":
+    [
+        "stylelint-config-standard",
+        "stylelint-config-prettier",
+        "stylelint-prettier/recommended"
+    ],
+    "rules": {
+        "declaration-block-single-line-max-declarations": null,
+        "property-no-vendor-prefix": null,
+        "value-no-vendor-prefix": null,
+        "alpha-value-notation ": null,
+        "color-function-notation": null
+    }
+}
