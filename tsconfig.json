@@ -8,6 +8,7 @@
       "allowJs": true,
       "sourceMap": true,
       "moduleResolution": "node",
-      "typeRoots": ["./node_modules/@types", "./ts/types"]
+      "typeRoots": ["./node_modules/@types", "./ts/types"],
+      "esModuleInterop": true
     }
   }

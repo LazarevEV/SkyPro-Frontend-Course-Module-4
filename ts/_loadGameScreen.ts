@@ -37,7 +37,7 @@ export function loadGameScreen(appWrapper:Element) {
 
     const cardsWrapper:Element = document.createElement('div');
     cardsWrapper.classList.add('cards-wrapper');
-    (<HTMLElement>cardsWrapper)!.style.gridTemplateColumns = `repeat(${getGridTemplateRows()}, 95px)`;
+    (<HTMLElement>cardsWrapper)!.style.gridTemplateColumns = `repeat(${getGridTemplateRows(window.sessionStorage.getItem('playerDifficulty')!)}, 95px)`;
     (<HTMLElement>cardsWrapper)!.style.gridTemplateRows = `repeat(4, 1fr)`;
 
     let cards:string[] = generateCards();
@@ -123,7 +123,7 @@ function checkCards(chosenCardElement:Element) {
 }
 
 function checkGameStatus() {
-    const timeLimit = 20 - 5*<number><any>window.sessionStorage.getItem('playerDifficulty');
+    // const timeLimit = 20 - 5*<number><any>window.sessionStorage.getItem('playerDifficulty');
     if (document.querySelectorAll('.game-card').length == document.querySelectorAll('.hidden').length) {
         window.application.modals['gameResult'](true);
 
@@ -133,8 +133,8 @@ function checkGameStatus() {
     }
 }
 
-function getGridTemplateRows() {
-    switch (window.sessionStorage.getItem('playerDifficulty')) {
+export function getGridTemplateRows(playerDifficulty:string) {
+    switch (playerDifficulty) {
         case '1':
             return 6;
         case '2':
